@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <section class="card__image">
+        <figure class="card__imageWrapper">
+          <img
+            class="card__imageWoman"
+            alt="illustration-woman-online-desktop"
+            src="./images/illustration-woman-online-desktop.svg"
+          />
+        </figure>
+        <img
+          class="card__imageBox"
+          alt="illustration-box-desktop"
+          src="./images/illustration-box-desktop.svg"
+        />
+        <img
+          class="card__imageWomanMobile"
+          alt="illustration-woman-online-mobile"
+          src="./images/illustration-woman-online-mobile.svg"
+        />
+      </section>
+      <section class="card__faq">
+        <h1 class="card__faqTitle">FAQ</h1>
+        <div class="card__accordion">
+          <input
+            type="radio"
+            id="accordion1"
+            name="accordion"
+            class="card__accordionRadio"
+          />
+          <label class="card__accordionTitle" for="accordion1">
+            <span class="card__accordionQuestion">
+              How many team members can I invite?
+            </span>
+            <img
+              alt="icon-arrow-down"
+              class="card__accordionArrow"
+              src="./images/icon-arrow-down.svg"
+            />
+          </label>
+          <p class="card__accordionAnswer">
+            You can invite up to 2 additional users on the Free plan. There is
+            no limit on team members for the Premium plan.
+          </p>
+        </div>
+        <div class="card__accordion">
+          <input
+            checked
+            type="radio"
+            id="accordion2"
+            name="accordion"
+            class="card__accordionRadio"
+          />
+          <label class="card__accordionTitle" for="accordion2">
+            <span class="card__accordionQuestion">
+              What is the maximum file upload size?
+            </span>
+            <img
+              alt="icon-arrow-down"
+              class="card__accordionArrow"
+              src="./images/icon-arrow-down.svg"
+            />
+          </label>
+          <p class="card__accordionAnswer">
+            No more than 2GB. All files in your account must fit your allotted
+            storage space.
+          </p>
+        </div>
+        <div class="card__accordion">
+          <input
+            type="radio"
+            id="accordion3"
+            name="accordion"
+            class="card__accordionRadio"
+          />
+          <label class="card__accordionTitle" for="accordion3">
+            <span class="card__accordionQuestion">
+              How do I reset my password?
+            </span>
+            <img
+              alt="icon-arrow-down"
+              class="card__accordionArrow"
+              src="./images/icon-arrow-down.svg"
+            />
+          </label>
+          <p class="card__accordionAnswer">
+            Click “Forgot password” from the login page or “Change password”
+            from your profile page. A reset link will be emailed to you.
+          </p>
+        </div>
+        <div class="card__accordion">
+          <input
+            type="radio"
+            id="accordion4"
+            name="accordion"
+            class="card__accordionRadio"
+          />
+          <label class="card__accordionTitle" for="accordion4">
+            <span class="card__accordionQuestion">
+              Can I cancel my subscription?
+            </span>
+            <img
+              alt="icon-arrow-down"
+              class="card__accordionArrow"
+              src="./images/icon-arrow-down.svg"
+            />
+          </label>
+          <p class="card__accordionAnswer">
+            Yes! Send us a message and we'll process your request no questions
+            asked.
+          </p>
+        </div>
+        <div class="card__accordion">
+          <input
+            type="radio"
+            id="accordion5"
+            name="accordion"
+            class="card__accordionRadio"
+          />
+          <label class="card__accordionTitle" for="accordion5">
+            <span class="card__accordionQuestion">
+              Do you provide additional support?
+            </span>
+            <img
+              alt="icon-arrow-down"
+              class="card__accordionArrow"
+              src="./images/icon-arrow-down.svg"
+            />
+          </label>
+          <p class="card__accordionAnswer">
+            Chat and email support is available 24/7. Phone lines are open
+            during normal business hours.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

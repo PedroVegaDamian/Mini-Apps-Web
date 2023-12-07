@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --first-color-gradient: hsl(273, 75%, 66%);
+  --second-color-gradient: hsl(240, 73%, 65%);
+  --text-dark-color: hsl(238, 29%, 16%);
+  --text-hover-color: hsl(14, 88%, 65%);
+  --text-color: hsl(237, 12%, 33%);
+  --text-color-light: hsl(240, 6%, 50%);
+  --border-divider-color: hsl(240, 5%, 91%);
+}
+
+@font-face {
+  font-weight: 700;
+  font-display: fallback;
+  font-family: 'KumbhSans-Bold';
+  src: url('../fonts/KumbhSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 400;
+  font-display: fallback;
+  font-family: 'KumbhSans-Regular';
+  src: url('../fonts/KumbhSans-Regular.ttf') format('truetype');
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: 'KumbhSans-Regular', sans-serif;
+  background: linear-gradient(
+    var(--first-color-gradient),
+    var(--second-color-gradient)
+  );
+  background-repeat: no-repeat;
+}
+
+.card {
+  width: 921px;
+  height: 510px;
+  display: flex;
+  margin-left: 43px;
+  position: relative;
+  border-radius: 1.5rem;
+  background: #fff url(../images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: -576px -294px;
+  box-shadow: 0 50px 42px -20px #543fb3;
+}
+
+.card__image {
+  height: 100%;
+  user-select: none;
+}
+
+.card__imageWrapper {
+  height: 100%;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.card__imageWoman {
+  top: 70px;
+  left: -84px;
+  position: relative;
+}
+
+.card__imageWomanMobile {
+  display: none;
+}
+
+.card__imageBox {
+  top: 204px;
+  left: -93px;
+  position: absolute;
+}
+
+.card__faq {
+  width: 100%;
+  padding: 4rem 3px;
+}
+
+.card__faqTitle {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: var(--text-dark-color);
+  font-family: 'KumbhSans-Bold', sans-serif;
+}
+
+.card__accordion {
+  padding: 1rem 0;
+  max-width: 352px;
+  border-bottom: 1px solid var(--border-divider-color);
+}
+
+.card__accordionRadio {
+  display: none;
+}
+
+.card__accordionTitle {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__accordionRadio:checked + .card__accordionTitle {
+  cursor: default;
+}
+
+.card__accordionQuestion {
+  transition: 0.5s;
+  font-size: 14.2px;
+  color: var(--text-color);
+}
+
+@media (hover: hover) {
+  .card__accordionTitle:hover .card__accordionQuestion {
+    transition: 0.2s;
+    color: var(--text-hover-color);
+  }
+}
+
+.card__accordionRadio:checked + .card__accordionTitle .card__accordionQuestion {
+  color: var(--text-dark-color);
+  font-family: 'KumbhSans-Bold', sans-serif;
+}
+
+.card__accordionArrow {
+  top: 2px;
+  right: 17px;
+  transition: 0.5s;
+  user-select: none;
+  position: relative;
+}
+
+.card__accordionRadio:checked + .card__accordionTitle .card__accordionArrow {
+  transition: 0.5s;
+  transform: rotateZ(180deg);
+}
+
+.card__accordionAnswer {
+  height: 0;
+  font-size: 12px;
+  visibility: hidden;
+  line-height: 18.4px;
+  color: var(--text-color-light);
+}
+
+.card__accordionRadio:checked ~ .card__accordionAnswer {
+  height: 100%;
+  transition: 0.3s;
+  visibility: visible;
+  padding-top: 0.6rem;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    background: linear-gradient(var(--first-color-gradient), #7b64e8);
+  }
+
+  .card {
+    margin-left: 0;
+    max-width: 327px;
+    margin-top: 63px;
+    min-height: 535px;
+    flex-direction: column;
+    background: #fff url(../images/bg-pattern-mobile.svg);
+    background-position-x: 45px;
+    background-repeat: no-repeat;
+    box-shadow: 0 50px 36px -20px rgba(0, 0, 0, 0.3);
+  }
+
+  .card__imageWrapper,
+  .card__imageBox {
+    display: none;
+  }
+
+  .card__imageWomanMobile {
+    left: 45px;
+    top: -108px;
+    display: block;
+    max-width: 236px;
+    position: absolute;
+  }
+
+  .card__faq {
+    padding-top: 8.2rem;
+  }
+
+  .card__faqTitle {
+    text-align: center;
+    margin-bottom: 0.9rem;
+  }
+
+  .card__accordion {
+    max-width: 280px;
+    margin-inline: auto;
+  }
+
+  .card__accordionQuestion {
+    font-size: 13.2px;
+  }
+
+  .card__accordionArrow {
+    position: static;
+  }
+
+  .card__accordionAnswer {
+    font-size: 12.5px;
+    line-height: 22.4px;
+  }
+}

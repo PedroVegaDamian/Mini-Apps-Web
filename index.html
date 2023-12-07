@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Apps Web</title>
+    <style>
+      body {
+        color: white;
+        font-family: "system-ui", serif;
+        background-image: url("./background.png");
+        background-position-y: top;
+        background-size: cover;
+      }
+
+      h1 {
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      main {
+        gap: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        width: fit-content;
+        border-radius: 16px;
+        margin-inline: auto;
+        padding: 1.5rem 2rem;
+        justify-content: center;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a::before {
+        content: "🔗";
+        margin-right: 0.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mini Apps Web</h1>
+    <main>
+      <a target="_blank" href="./juego-de-la-suma/index.html">
+        Juego de la Suma
+      </a>
+      <a target="_blank" href="./juego-ahorcado/index.html">Juego Ahorcado</a>
+      <a target="_blank" href="./quiz/index.html">Quiz</a>
+      <a target="_blank" href="./quiz-banderas/index.html">Quiz Banderas</a>
+      <a target="_blank" href="./FAQ-accordion-card-challenge-hub/index.html">
+        FAQ Accordion Card
+      </a>
+    </main>
+  </body>
+</html>
