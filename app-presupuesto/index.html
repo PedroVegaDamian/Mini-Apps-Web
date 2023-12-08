@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="App - Presupesto(Pedro Vega)" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://pedrovegadamian.github.io/Mini-Apps-Web/app-presupuesto/"
+    />
+    <meta
+      property="og:image"
+      content="https://i.pinimg.com/originals/89/39/58/893958dd97c844a52d3ffbebc8df4533.jpg"
+    />
+    <meta
+      property="og:description"
+      content="Aplicación que te ayudará con los calculos de un presupuesto para tu negocio"
+    />
+    <meta property="og:locale" content="es_PE" />
+    <title>Presupesto App</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1 class="title">Presupesto App</h1>
+
+    <div class="container">
+      <div class="inputs">
+        <section class="budget">
+          <fieldset class="fieldset-input">
+            <div class="box-input">
+              <label for="budget">Ingresa tu presupuesto</label>
+              <input type="number" id="budget" />
+            </div>
+            <button id="addBudget">Agregar presupesto</button>
+          </fieldset>
+        </section>
+        <section class="expensive">
+          <fieldset class="fieldset-output">
+            <div class="box-input">
+              <label for="expensive">Ingresa el nombre de tu gasto</label>
+              <input type="text" id="expensive" />
+            </div>
+            <div class="box-input">
+              <label for="expensive_amount">Ingresa el monto de tu gasto</label>
+              <input type="number" id="expensive_amount" />
+            </div>
+            <button id="addExpensive">Agregar gasto</button>
+          </fieldset>
+        </section>
+      </div>
+
+      <div class="outputs">
+        <section class="principal-information">
+          <div class="info budget">
+            <p class="sub-title">Presupesto</p>
+            <p class="budget total">S/. <span id="totalBudget">0</span></p>
+          </div>
+          <div class="info expensives">
+            <p class="sub-title">Gastos</p>
+            <p class="expensives total">
+              S/. <span id="totalExpensives">0</span>
+            </p>
+          </div>
+          <div class="info balance">
+            <p class="sub-title">Balance</p>
+            <p class="balance total">S/. <span id="totalBalance">0</span></p>
+          </div>
+        </section>
+
+        <section class="list-expensives">
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre de Gastos</th>
+                <th>Valor de Gastos</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="listOfExpensives"></tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

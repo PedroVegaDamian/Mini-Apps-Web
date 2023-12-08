@@ -1,0 +1,147 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1110px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+fieldset {
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+input {
+  width: 300px;
+  height: 24px;
+  display: block;
+}
+
+input:focus {
+  outline: none;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+button {
+  padding: 8px;
+  border-style: none;
+  font-size: 17px;
+  cursor: pointer;
+  color: #fff;
+  text-shadow: 0px 0px 4px #fff;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+thead {
+  background-color: rgb(253, 80, 80);
+  color: #fff;
+}
+
+tbody {
+  background-color: rgb(179, 219, 255);
+  font-weight: 600;
+}
+
+#addBudget {
+  background-color: green;
+}
+
+#addExpensive {
+  background-color: red;
+}
+
+.btnUpdate {
+  background-color: orange;
+}
+
+.btnDelete {
+  background-color: red;
+}
+
+.fieldset-input {
+  border-color: green;
+}
+
+.fieldset-output {
+  border-color: red;
+}
+
+.box-input {
+  margin-bottom: 12px;
+}
+
+.principal-information,
+.list-expensives {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+.info {
+  margin: 0 30px;
+}
+
+.sub-title {
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.total {
+  font-size: 30px;
+}
+
+.budget.total {
+  color: green;
+}
+
+.expensives.total {
+  color: red;
+}
+
+.balance.total {
+  color: blue;
+}
+
+@media (max-width: 688px) {
+  .principal-information {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sub-title {
+    width: 200px;
+    margin-top: 50px;
+  }
+
+  fieldset {
+    padding: 10px;
+  }
+}
